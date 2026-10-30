@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ur" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Traffic Logic کی رازداری کی پالیسی</title>
+<meta name="description" content="Android کے لیے Traffic Logic: Route Puzzle گیم کی رازداری کی پالیسی۔">
+<link rel="alternate" hreflang="en" href="https://succubhunter.github.io/traffic-logic-privacy/">
+<link rel="alternate" hreflang="ru" href="https://succubhunter.github.io/traffic-logic-privacy/ru/">
+<link rel="alternate" hreflang="es" href="https://succubhunter.github.io/traffic-logic-privacy/es/">
+<link rel="alternate" hreflang="pt" href="https://succubhunter.github.io/traffic-logic-privacy/pt/">
+<link rel="alternate" hreflang="fr" href="https://succubhunter.github.io/traffic-logic-privacy/fr/">
+<link rel="alternate" hreflang="de" href="https://succubhunter.github.io/traffic-logic-privacy/de/">
+<link rel="alternate" hreflang="it" href="https://succubhunter.github.io/traffic-logic-privacy/it/">
+<link rel="alternate" hreflang="tr" href="https://succubhunter.github.io/traffic-logic-privacy/tr/">
+<link rel="alternate" hreflang="pl" href="https://succubhunter.github.io/traffic-logic-privacy/pl/">
+<link rel="alternate" hreflang="id" href="https://succubhunter.github.io/traffic-logic-privacy/id/">
+<link rel="alternate" hreflang="vi" href="https://succubhunter.github.io/traffic-logic-privacy/vi/">
+<link rel="alternate" hreflang="zh-Hans" href="https://succubhunter.github.io/traffic-logic-privacy/zh-Hans/">
+<link rel="alternate" hreflang="zh-Hant" href="https://succubhunter.github.io/traffic-logic-privacy/zh-Hant/">
+<link rel="alternate" hreflang="ja" href="https://succubhunter.github.io/traffic-logic-privacy/ja/">
+<link rel="alternate" hreflang="ko" href="https://succubhunter.github.io/traffic-logic-privacy/ko/">
+<link rel="alternate" hreflang="hi" href="https://succubhunter.github.io/traffic-logic-privacy/hi/">
+<link rel="alternate" hreflang="ar" href="https://succubhunter.github.io/traffic-logic-privacy/ar/">
+<link rel="alternate" hreflang="bn" href="https://succubhunter.github.io/traffic-logic-privacy/bn/">
+<link rel="alternate" hreflang="ur" href="https://succubhunter.github.io/traffic-logic-privacy/ur/">
+<link rel="alternate" hreflang="x-default" href="https://succubhunter.github.io/traffic-logic-privacy/">
+<style>
+  :root {
+    --bg: #ffffff;
+    --text: #1f2328;
+    --muted: #59636e;
+    --line: #d8dee4;
+    --link: #0a5bb5;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14171a;
+      --text: #e6e9ec;
+      --muted: #9aa5b1;
+      --line: #30363d;
+      --link: #6cb2ff;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", Arial, sans-serif;
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 24px 16px 64px; }
+  h1 { font-size: 30px; line-height: 1.25; margin: 0 0 8px; }
+  h2 { font-size: 20px; line-height: 1.3; margin: 32px 0 8px; }
+  a { color: var(--link); overflow-wrap: anywhere; }
+  code { display: inline-block; max-width: 100%; font-size: 0.875em; overflow-wrap: anywhere; }
+  .meta, .note { color: var(--muted); margin: 0 0 16px; }
+  .languages { display: flex; flex-wrap: wrap; gap: 4px 12px; margin: 0 0 32px; padding-block-end: 16px; border-block-end: 1px solid var(--line); font-size: 15px; }
+  .languages a { padding: 4px 0; text-decoration: none; }
+  .languages a[aria-current] { color: var(--text); font-weight: 600; }
+  .table-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+  th, td { padding-block: 8px; padding-inline: 0 12px; border-block-end: 1px solid var(--line); text-align: start; vertical-align: top; }
+</style>
+</head>
+<body>
+<main>
+<nav class="languages" aria-label="زبان">
+<a href="../" lang="en">English</a>
+<a href="../ru/" lang="ru">Русский</a>
+<a href="../es/" lang="es">Español</a>
+<a href="../pt/" lang="pt">Português</a>
+<a href="../fr/" lang="fr">Français</a>
+<a href="../de/" lang="de">Deutsch</a>
+<a href="../it/" lang="it">Italiano</a>
+<a href="../tr/" lang="tr">Türkçe</a>
+<a href="../pl/" lang="pl">Polski</a>
+<a href="../id/" lang="id">Bahasa Indonesia</a>
+<a href="../vi/" lang="vi">Tiếng Việt</a>
+<a href="../zh-Hans/" lang="zh-Hans">简体中文</a>
+<a href="../zh-Hant/" lang="zh-Hant">繁體中文</a>
+<a href="../ja/" lang="ja">日本語</a>
+<a href="../ko/" lang="ko">한국어</a>
+<a href="../hi/" lang="hi">हिन्दी</a>
+<a href="../ar/" lang="ar">العربية</a>
+<a href="../bn/" lang="bn">বাংলা</a>
+<a href="../ur/" lang="ur" aria-current="page">اردو</a>
+</nav>
+<h1>Traffic Logic کی رازداری کی پالیسی</h1>
+<p class="meta">نفاذ کی تاریخ: 31 اکتوبر 2026</p>
+<p class="note">یہ ایک ترجمہ ہے۔ انگریزی ورژن سے فرق ہونے کی صورت میں انگریزی ورژن معتبر ہوگا۔</p>
+<h2>1. جائزہ</h2>
+<p>Traffic Logic رجسٹریشن کے بغیر چلتا ہے اور آپ کا نام، ای میل پتہ، رابطے، مقام یا آپ کی فائلوں تک رسائی نہیں مانگتا۔</p><p>یہ پالیسی Android کے لیے Traffic Logic: Route Puzzle گیم پر لاگو ہوتی ہے، جس کی ایپلیکیشن ID <code dir="ltr">com.succubhuntersinc.trafficlogic.game</code> ہے۔ گیم کا ڈویلپر succubhuntersinc (”ہم“) ہے۔</p>
+<h2>2. کون سا ڈیٹا پروسیس کیا جاتا ہے</h2>
+<p>آپ کی پیش رفت اور ترتیبات آپ کے آلے پر محفوظ رہتی ہیں۔ آلے سے باہر صرف گیم کے استحکام سے متعلق تکنیکی ڈیٹا جاتا ہے۔</p>
+<div class="table-wrap"><table><thead><tr><th>ڈیٹا</th><th>اس میں کیا شامل ہے</th><th>کہاں رکھا جاتا ہے</th></tr></thead><tbody><tr><td>پیش رفت</td><td>مکمل کیے گئے مراحل</td><td>آپ کے آلے پر</td></tr><tr><td>ترتیبات</td><td>زبان، آواز کی سطح، آواز بند، کم حرکت</td><td>آپ کے آلے پر</td></tr><tr><td>تکنیکی ڈیٹا</td><td>کریش اور خرابی کے لاگز، اور ایپ کے رکنے، کارکردگی اور ایپ کی کنفیگریشن سے متعلق معلومات</td><td>Unity کے سرورز پر</td></tr><tr><td>انسٹالیشن ID</td><td>گیم کی اس انسٹالیشن کی منفرد ID</td><td>Unity کے سرورز پر</td></tr></tbody></table></div>
+<p>تکنیکی ڈیٹا بھیجے جانے پر Unity کے سرور کو آپ کے کنکشن کا IP پتہ موصول ہوتا ہے۔ یہ نیٹ ورک مواصلات کے لیے ضروری ہے۔</p><p>اگر Android بیک اپ آن ہے تو سسٹم آپ کی پیش رفت اور ترتیبات آپ کے Google اکاؤنٹ میں محفوظ کر سکتا ہے۔ ان کاپیوں تک ہماری رسائی نہیں ہے۔</p><p>گیم آپ کا نام، ای میل پتہ، فون نمبر، رابطے، مقام، تصاویر، فائلیں یا ادائیگی کی تفصیلات جمع نہیں کرتا۔ اس میں اشتہارات، ایپ کے اندر خریداری، اکاؤنٹس یا چیٹ نہیں ہیں، اور یہ اشتہاری ID کی درخواست نہیں کرتا۔</p>
+<h2>3. مقاصد اور قانونی بنیادیں</h2>
+<p>ہم تکنیکی ڈیٹا صرف گیم کی خرابیاں تلاش کرنے اور درست کرنے کے لیے استعمال کرتے ہیں۔ ہم اسے اشتہارات یا پروفائلنگ کے لیے استعمال نہیں کرتے۔</p>
+<div class="table-wrap"><table><thead><tr><th>مقصد</th><th>ڈیٹا</th><th>بنیاد</th></tr></thead><tbody><tr><td>مختلف سیشنز کے درمیان پیش رفت اور ترتیبات محفوظ رکھنا</td><td>پیش رفت، ترتیبات</td><td>آپ کے آلے پر گیم کا چلنا؛ یہ ڈیٹا ہمیں موصول نہیں ہوتا</td></tr><tr><td>کریش، خرابیوں اور ایپ کے رکنے کے مسائل تلاش کرنا اور درست کرنا</td><td>تکنیکی ڈیٹا، انسٹالیشن ID</td><td>گیم کو مستحکم رکھنے میں جائز مفاد (GDPR کی شق 6(1)(f) اور دوسرے ممالک کے اسی طرح کے قواعد)</td></tr></tbody></table></div>
+<h2>4. ڈیٹا کسے ملتا ہے</h2>
+<p>ہم ڈیٹا فروخت نہیں کرتے۔ تکنیکی ڈیٹا صرف Unity کو ملتا ہے، اور گیم کی تقسیم Google Play کرتا ہے۔</p>
+<div class="table-wrap"><table><thead><tr><th>سروس</th><th>کردار</th><th>تفصیلات</th></tr></thead><tbody><tr><td>Unity Technologies</td><td>ہماری جانب سے تکنیکی ڈیٹا اور انسٹالیشن ID کو پروسیس کرتا ہے</td><td><a href="https://docs.unity.com/en-us/cloud/developer-data/privacy-overview">Unity Diagnostics کی رازداری</a></td></tr><tr><td>Google Play</td><td>گیم تقسیم کرتا ہے اور اپنے قواعد کے مطابق انسٹالیشن کا ڈیٹا پروسیس کرتا ہے</td><td><a href="https://policies.google.com/privacy">Google کی رازداری کی پالیسی</a></td></tr></tbody></table></div>
+<p>یہ سروسز آپ کے ملک سے باہر ڈیٹا پروسیس کر سکتی ہیں۔ قانون کے تقاضے پر ہم ڈیٹا ظاہر کر سکتے ہیں۔</p>
+<h2>5. ذخیرہ، حفاظت اور حذف</h2>
+<p>Unity بطور طے شدہ کریش رپورٹس کا ذاتی ڈیٹا 90 دن تک رکھتا ہے۔ کھلاڑیوں کے ڈیٹا والے ہمارے اپنے سرورز نہیں ہیں۔</p>
+<ul><li><strong>آپ کے آلے پر۔</strong> پیش رفت اور ترتیبات اس وقت تک رہتی ہیں جب تک آپ گیم ان انسٹال نہ کریں یا Android کی ترتیبات میں اس کا ڈیٹا صاف نہ کریں۔ اس کے بعد انہیں صرف آپ کے آلے کے بیک اپ سے بحال کیا جا سکتا ہے۔</li><li><strong>بیک اپ۔</strong> ان کا انتظام Android کی ترتیبات اور آپ کے Google اکاؤنٹ سے ہوتا ہے۔</li><li><strong>منتقلی۔</strong> Unity تکنیکی ڈیٹا کو منتقلی کے دوران انکرپٹ کرتا ہے۔</li><li><strong>درخواست پر حذف۔</strong> سیکشن 8 میں دیے گئے پتے پر ہمیں لکھیں۔ ہمارے پاس آپ کا نام اور رابطے کی تفصیلات نہیں ہیں، اس لیے ہم ایسی معلومات مانگ سکتے ہیں جن سے آپ کی انسٹالیشن تلاش کرنے میں مدد ملے۔ اگر ہم اسے تلاش نہ کر سکے تو آپ کو بتا دیں گے۔</li></ul>
+<h2>6. بچے</h2>
+<p>یہ گیم خاص طور پر 13 سال سے کم عمر بچوں کے لیے نہیں ہے، اور ہم دانستہ طور پر ان کا ذاتی ڈیٹا جمع نہیں کرتے۔ اگر آپ کو لگتا ہے کہ ہمیں کسی بچے کا ڈیٹا ملا ہے تو ہمیں لکھیں، ہم اسے حذف کر دیں گے۔</p>
+<h2>7. آپ کے حقوق</h2>
+<p>آپ کے ملک کے لحاظ سے، آپ اپنے ڈیٹا تک رسائی، اس کی درستی یا حذف کی درخواست کر سکتے ہیں اور اس کی پروسیسنگ پر اعتراض کر سکتے ہیں۔</p><p>گیم میں کریش رپورٹس بند کرنے کے لیے کوئی الگ سوئچ نہیں ہے۔ اپنے حقوق استعمال کرنے کے لیے ہمیں لکھیں۔ آپ اپنے ملک کے ڈیٹا تحفظ کے ادارے میں شکایت بھی درج کرا سکتے ہیں۔</p>
+<h2>8. تبدیلیاں اور رابطہ</h2>
+<p>رازداری سے متعلق سوالات <a href="mailto:succubhuntersinc@gmail.com" dir="ltr">succubhuntersinc@gmail.com</a> پر بھیجیں۔ اگر یہ پالیسی تبدیل ہوتی ہے تو ہم نیا ورژن اسی صفحے پر شائع کریں گے اور اوپر دی گئی تاریخ اپ ڈیٹ کریں گے۔</p>
+</main>
+</body>
+</html>
